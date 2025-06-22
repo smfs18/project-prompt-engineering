@@ -1,6 +1,6 @@
 # 🚀 Gerador de Ideias de Negócios com IA
 
-Um projeto Full-Stack que utiliza a API do Google Gemini para gerar ideias de negócios inovadoras a partir de um problema ou nicho de mercado descrito pelo usuário. A interface é construída com React e a resposta da IA é renderizada em um formato elegante e legível.
+Um projeto Full-Stack que utiliza a API do Google Gemini para gerar ideias de negócios inovadoras a partir de um problema ou nicho de mercado descrito pelo usuário. A interface é construída com React e a resposta da IA é renderizada em um formato elegante e legível. Neste projeto, apliquei os princípios da engenharia de prompt que está sendo executada junto com a respota do usuário para tornar a comunicação entre o usuário e a IA de forma mais clara, concisa e eficiente. 
 
 ---
 
