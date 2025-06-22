@@ -2,9 +2,6 @@
 
 Um projeto Full-Stack que utiliza a API do Google Gemini para gerar ideias de negócios inovadoras a partir de um problema ou nicho de mercado descrito pelo usuário. A interface é construída com React e a resposta da IA é renderizada em um formato elegante e legível.
 
-![Demonstração do Projeto](https://i.imgur.com/k6lP09F.png)
-*Exemplo da interface com o design Dark Mode aplicado.*
-
 ---
 
 ## ✨ Funcionalidades
