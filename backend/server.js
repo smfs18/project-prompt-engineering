@@ -1,6 +1,7 @@
 // Importa o dotenv para carregar variáveis de ambiente do arquivo .env
 require('dotenv').config();
 
+const GEMINI_API_KEY = 'AIzaSyA-AAS4433_78WRt1L2y7JAZOgGEbZQjTc'
 // Importa o framework Express para criar e gerenciar o servidor web
 const express = require('express');
 
@@ -37,7 +38,7 @@ app.use(express.json());
 
 // Cria uma nova instância da classe GoogleGenerativeAI, passando a chave da API.
 // A chave é acessada através de `process.env.GEMINI_API_KEY`, que vem do seu arquivo .env.
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 // --- Função de Engenharia de Prompt ---
 // Esta função é a chave para guiar o Gemini a gerar as respostas desejadas.

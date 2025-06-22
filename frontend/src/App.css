@@ -1,38 +1,130 @@
+/* OPÇÃO 2: DESIGN DARK MODE */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
 .App {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e6edf3;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #8b949e;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  color: #c9d1d9;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 0.2rem rgba(56, 139, 253, 0.25);
+}
+
+button {
+  cursor: pointer;
+  background-color: #238636;
   color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  align-self: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover:not(:disabled) {
+  background-color: #2ea043;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+  background-color: #57606a;
+  color: #c9d1d9;
+  cursor: not-allowed;
+}
+
+/* Saída das Ideias */
+.ideas-output {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.markdown-content h2, .ideas-output h2 {
+  font-size: 1.8rem;
+  color: #e6edf3;
+  border-bottom: 2px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.5rem;
+  color: #58a6ff; /* Cor de destaque para títulos */
+  margin-top: 2rem;
+}
+
+.markdown-content h4 {
+  font-size: 1.2rem;
+  color: #8b949e;
+  margin-top: 1.5rem;
+}
+
+.markdown-content ul {
+  padding-left: 20px;
+}
+
+.markdown-content li {
+  margin-bottom: 0.75rem;
+}
+
+.markdown-content strong {
+  color: #e6edf3;
+  font-weight: 600;
+}
+
+.markdown-content code {
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.error-message {
+  color: #f85149;
+  font-weight: 600;
 }

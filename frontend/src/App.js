@@ -1,11 +1,12 @@
 // frontend/src/App.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import './App.css'; // Opcional, para estilização
+import ReactMarkdown from 'react-markdown'; // 1. IMPORTAR A BIBLIOTECA
+import './App.css'; 
 
 function App() {
   const [topic, setTopic] = useState('');
-  const [ideas, setIdeas] = useState(''); // Armazenará o texto das ideias
+  const [ideas, setIdeas] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -16,12 +17,12 @@ function App() {
     setIdeas('');
 
     try {
-      // Faz a requisição para o backend
       const response = await axios.post('http://localhost:3001/api/generate-idea', {
         topic: topic,
-        // Você pode adicionar mais opções aqui, ex: options: { focus: 'tecnologia' }
       });
-      setIdeas(response.data.ideaText); // Pega o texto gerado
+
+      // Dica: Peça ao seu backend para instruir o Gemini a sempre responder em Markdown!
+      setIdeas(response.data.ideaText);
     } catch (err) {
       console.error('Erro na requisição ao backend:', err);
       setError('Não foi possível gerar as ideias. Verifique a conexão com o backend.');
@@ -36,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Gerador de Ideias de Negócios Inovadoras</h1>
+        <h1>Gerador de Ideias de Negócios</h1>
       </header>
       <main>
         <form onSubmit={handleSubmit}>
@@ -63,10 +64,10 @@ function App() {
         {ideas && (
           <div className="ideas-output">
             <h2>Ideias Geradas:</h2>
-            {/* Renderiza o texto puro. Para um parser mais robusto,
-                você precisaria processar o texto do Gemini no backend
-                ou usar uma biblioteca de markdown no frontend. */}
-            <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'inherit' }}>{ideas}</pre>
+            {/* 2. SUBSTITUIR <pre> por <ReactMarkdown> */}
+            <div className="markdown-content">
+              <ReactMarkdown>{ideas}</ReactMarkdown>
+            </div>
           </div>
         )}
       </main>
