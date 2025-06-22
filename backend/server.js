@@ -1,7 +1,7 @@
 // Importa o dotenv para carregar variáveis de ambiente do arquivo .env
 require('dotenv').config();
 
-const GEMINI_API_KEY = 'AIzaSyA-AAS4433_78WRt1L2y7JAZOgGEbZQjTc'
+const GEMINI_API_KEY = 'SUA CHAVE DA API'
 // Importa o framework Express para criar e gerenciar o servidor web
 const express = require('express');
 
